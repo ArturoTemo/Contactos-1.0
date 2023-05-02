@@ -5,38 +5,17 @@ import datos.PersonaDao;
 import datos.PersonaDaoJDBC;
 import domain.PersonaDTO;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ListarContactos {
+public class ListarContactos  {
+    private Connection conexionTransaccional;
+    private static final String SQL_SELECT="SELECT id_persona,nombre, apellido, email, telefono FROM persona";
+    public List<PersonaDTO> select() throws SQLException {
 
-    public static void ListaPersonas(){
-
-        Connection conexion = null;
-        try {
-            conexion = Conexion.getConnection();
-            if (conexion.getAutoCommit()) {
-                conexion.setAutoCommit(false);
-            }
-
-            PersonaDao personaDao = new PersonaDaoJDBC(conexion);
-            
-            List<PersonaDTO> personas = personaDao.select();
-            
-            for(PersonaDTO persona: personas){
-                System.out.println("Persona DTO:" + persona);
-            }
-
-            conexion.commit();
-            System.out.println("Se ha hecho commit de la transaccion");
-        } catch (SQLException ex) {
-            ex.printStackTrace(System.out);
-            System.out.println("Entramos al rollback");
-            try {
-                conexion.rollback();
-            } catch (SQLException ex1) {
-                ex1.printStackTrace(System.out);
-            }
-        }
-
+        return null;
     }
+
+
 }
+

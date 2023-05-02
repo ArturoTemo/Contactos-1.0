@@ -7,7 +7,6 @@ public class UsuarioDTO {
 
     public UsuarioDTO() {
     }
-
     public UsuarioDTO(int id_usuario) {
         this.id_usuario = id_usuario;
     }
@@ -48,7 +47,7 @@ public class UsuarioDTO {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id_usuario=" + id_usuario + ", username=" + username + ", password=" + password + '}';
+        return "Usuario:" + "id_usuario=" + id_usuario + ", username=" + username + ", password=" + password + '}';
     }
     
     

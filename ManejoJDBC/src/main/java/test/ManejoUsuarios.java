@@ -17,7 +17,6 @@ public class ManejoUsuarios {
             if (conexion.getAutoCommit()) {
                 conexion.setAutoCommit(false);
             }
-
             UsuarioDao usuarioDao = new UsuarioDaoJDBC(conexion);
 
             List<UsuarioDTO> usuarios = usuarioDao.select();
@@ -25,8 +24,6 @@ public class ManejoUsuarios {
             for (UsuarioDTO usuario : usuarios) {
                 System.out.println("Usuario DTO:" + usuario);
             }
-
-
             conexion.commit();
             System.out.println("Se ha hecho commit de la transaccion");
         } catch (SQLException ex) {

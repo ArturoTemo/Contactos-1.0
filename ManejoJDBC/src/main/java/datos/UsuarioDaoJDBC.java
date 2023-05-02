@@ -110,7 +110,7 @@ public class UsuarioDaoJDBC implements UsuarioDao{
             System.out.println("Registros eliminados:" + rows);
         } finally {
             Conexion.close(stmt);
-             if (this.conexionTransaccional == null) {
+            if (this.conexionTransaccional == null) {
                 Conexion.close(conn);
             }
         }

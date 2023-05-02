@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class Contactos {
     private Connection conexionTransaccional;
     private static final String SQL_INSERT = "INSERT INTO usuario(username, password) VALUES(?, ?)";
-    public int crearcontacto(PersonaDTO persona) throws SQLException {
+    public int CrearContacto(PersonaDTO persona) throws SQLException {
 
         Connection conn = null;
         PreparedStatement stmt = null;
