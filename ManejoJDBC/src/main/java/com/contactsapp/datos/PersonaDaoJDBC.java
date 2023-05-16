@@ -94,7 +94,7 @@ public class PersonaDaoJDBC implements PersonaDao {
 
         try {
             conn = this.conexionTransaccional != null ? this.conexionTransaccional : Conexion.getConnection();
-            System.out.println("ejecutando query: " + SQL_UPDATE);
+            System.out.println("Running Query: " + SQL_UPDATE);
             stmt = conn.prepareStatement(SQL_UPDATE);
             stmt.setString(1, persona.getNombre());
             stmt.setString(2, persona.getApellido());
@@ -102,8 +102,9 @@ public class PersonaDaoJDBC implements PersonaDao {
             stmt.setString(4, persona.getTelefono());
             stmt.setInt(5, persona.getId_persona());
 
+
             rows = stmt.executeUpdate();
-            System.out.println("Registros actualizado:" + rows);
+            System.out.println("Updated Records:" + rows);
 
         } finally {
             Conexion.close(stmt);
@@ -122,11 +123,11 @@ public class PersonaDaoJDBC implements PersonaDao {
 
         try {
             conn = this.conexionTransaccional != null ? this.conexionTransaccional : Conexion.getConnection();
-            System.out.println("Ejecutando query:" + SQL_DELETE);
+            System.out.println("Deleting the person Id:" + SQL_DELETE);
             stmt = conn.prepareStatement(SQL_DELETE);
             stmt.setInt(1, persona.getId_persona());
             rows = stmt.executeUpdate();
-            System.out.println("Registros eliminados:" + rows);
+            System.out.println("Deleted Record:" + rows);
         } finally {
             Conexion.close(stmt);
             if (this.conexionTransaccional == null) {

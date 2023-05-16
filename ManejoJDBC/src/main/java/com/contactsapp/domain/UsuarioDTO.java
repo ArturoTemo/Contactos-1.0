@@ -47,7 +47,7 @@ public class UsuarioDTO {
 
     @Override
     public String toString() {
-        return "Usuario:" + "id_usuario=" + id_usuario + ", username=" + username + ", password=" + password + '}';
+        return "User:" + "id_usuario=" + id_usuario + ", username=" + username + ", password=" + password + '}';
     }
 
 

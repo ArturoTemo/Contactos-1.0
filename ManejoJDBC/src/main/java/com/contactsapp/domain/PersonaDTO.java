@@ -11,11 +11,14 @@ public class PersonaDTO {
     public PersonaDTO(){}
 
     public PersonaDTO(String nombre, String apellido, String email, String telefono) {
+
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
     }
+
+
 
     public int getId_persona() {
         return id_persona;
