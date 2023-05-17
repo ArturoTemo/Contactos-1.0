@@ -35,11 +35,11 @@ public class PersonaDaoJDBC implements PersonaDao {
             stmt = conn.prepareStatement(SQL_SELECT);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                int id_persona = rs.getInt("id_persona");
-                String nombre = rs.getString("nombre");
-                String apellido = rs.getString("apellido");
-                String email = rs.getString("email");
-                String telefono = rs.getString("telefono");
+                int id_persona = rs.getInt("id_person");
+                String nombre = rs.getString("Name");
+                String apellido = rs.getString("Last Name");
+                String email = rs.getString("Email");
+                String telefono = rs.getString("Phone");
 
                 persona = new PersonaDTO();
                 persona.setId_persona(id_persona);

@@ -77,7 +77,7 @@ public class App {
                                 App.inputData("phone", sc)
                         ));
                     } catch (Exception e) {
-                        System.err.println("Ha sucedido un error. Intenta mas tarde");
+                        System.err.println("An error has occurred. I try later");
                     }
                     break;
                 case 3:
